@@ -11,8 +11,7 @@
 pip install robotframework
 pip install robotframework-selenium2library
 ```
-<br/>
-To run in chrome, find chromedriver in https://sites.google.com/a/chromium.org/chromedriver/downloads 
+For running in chrome, find chromedriver in https://sites.google.com/a/chromium.org/chromedriver/downloads 
 <br/>and place it in this path:
 ```
 /usr/local/bin/chromedriver
