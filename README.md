@@ -10,6 +10,7 @@
 ```
 pip install robotframework
 pip install robotframework-selenium2library
+alias chrome="open -a \"Google Chrome\"
 ```
 For running in chrome, find chromedriver in https://sites.google.com/a/chromium.org/chromedriver/downloads 
 <br/>and place it in this path:
@@ -24,12 +25,24 @@ brew cask install chromedriver
 
 ## Configuration
 
-You need to update some variable inside of `config.robot`:
+You need to update some variable inside of `config.robot`. 
+More description, please find detail at <a href="#more-configuration">More Configuration Section</a>
+<br/>
+
+## Run Your Automation
+
+```
+robot run.robot
+```
+<img src="assets/run-robot.png" /><br/>
+
+<br/><br/><hr/>
+## More Configuration
+Here the list and detail of your `config.robot` :
 ```
 *** Variables ***
 ${BROWSER}                  chrome
 ${CLOSE_BROWSER}            1
-# ${SUPERLINK}              https://superyou:superyousequisonline@staging.superyou.co.id
 ${SUPERLINK}                https://superyou.co.id
 # 0: Dont Close; 1: Close; ** CLOSE BROWSER IF TESTCASE SUCCESS COMPLETELY
 ${SUPERSAFE}                1
@@ -60,15 +73,5 @@ ${BENEFICIARY_RELATION}     2
 ${BENEFICIARY_NAME}         Beneficiary Name
 ${BENEFICIARY_IDENTITY}     9876987698769876
 ```
-<br/>
 
-## Run Your Automation
 
-```
-robot yourfile (*with extension .robot)
-```
-
-Example:
-```
-robot run.robot
-```
