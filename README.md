@@ -35,6 +35,14 @@ More description, please find detail at <a href="#more-configuration">More Confi
 robot run.robot
 ```
 <img src="assets/run-robot.png" /><br/>
+### Open The Report
+```
+chrome report.html
+```
+### Open Detail Log
+```
+chrome log.html
+```
 
 <br/><br/><hr/>
 ## More Configuration
