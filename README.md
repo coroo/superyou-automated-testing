@@ -12,14 +12,15 @@ pip install robotframework
 pip install robotframework-selenium2library
 alias openchrome="open -a \"Google Chrome\" "
 ```
-For running in chrome, find chromedriver in https://sites.google.com/a/chromium.org/chromedriver/downloads 
-<br/>and place it in this path:
-```
-/usr/local/bin/chromedriver
-```
-Or install using brew:
+
+### Driver Need to be Installed
+For running in chrome, you need to install chromedriver:
 ```
 brew cask install chromedriver
+```
+For running in firefox, you need to install geckodriver:
+```
+brew cask install geckodriver
 ```
 <br/>
 
@@ -48,38 +49,75 @@ openchrome log.html
 ## More Configuration
 Here the list and detail of your `config.robot` :
 ```
-*** Variables ***
-${BROWSER}                  chrome
-${CLOSE_BROWSER}            1
-${SUPERLINK}                https://superyou.co.id
-# 0: Dont Close; 1: Close; ** CLOSE BROWSER IF TESTCASE SUCCESS COMPLETELY
-${SUPERSAFE}                1
-${SUPERSTRONG}              1
-${SUPERLIFE}                1
-# 0: Not Include Product Test; 1: Include Product Test;
-
-# === PH DETAIL ===
-${PH_EMAIL}                 coroo.wicaksono@test.com
-${PH_NAME}                  Kuncoro Wicaksono
-${PH_MOBILE}                087804005006
-${PH_IDENTITY}              1234123412341234
-${PH_GENDER}                1 
-# 1: Male; 2: Female;
-${PH_ADDRESS}               Jalan Remaja No 58 RT01 RW001 Ceger, Cipayung, Jakarta Timur
-${PH_BIRTH_AT}              Jakarta
-
-# === INSURED DETAIL ===
-${INSURED_RELATION}         2
-# 1: Self; 2: Wife/Husband; 3: Son; 4: Daughter; 5: Father; 6: Mother; 7: Brother; 8: Sister;
-${INSURED_NAME}             Insured Name
-${INSURED_IDENTITY}         4321432143214321
-
-# === PH DETAIL ===
-${BENEFICIARY_RELATION}     2
-# if INSURED_RELATION != 1 Then 1: Self; 2: Wife/Husband; 3: Son; 4: Daughter; 5: Father; 6: Mother; 7: Brother; 8: Sister;
-# if INSURED_RELATION == 1 Then 1: Wife;
-${BENEFICIARY_NAME}         Beneficiary Name
-${BENEFICIARY_IDENTITY}     9876987698769876
+.
+├── ${BROWSER}
+│   └── chrome
+│   └── firefox
+│
+├── ${CLOSE_BROWSER}
+│   └── 0 ──: leave browser open after testcase success;
+│   └── 1 ──: close browser after testcase success;
+│
+├── ${SUPERLINK}
+│
+├── ${SUPERSAFE}
+│   └── 0 ──: not include SUPERSAFE in product test;
+│   └── 1 ──: include SUPERSAFE product test;
+│
+├── ${SUPERSTRONG}
+│   └── 0 ──: not include SUPERSTRONG in product test;
+│   └── 1 ──: include SUPERSTRONG product test;
+│
+├── ${SUPERLIFE}
+│   └── 0 ──: not include SUPERLIFE in product test;
+│   └── 1 ──: include SUPERLIFE product test;
+│
+├── ${PH_EMAIL}
+│
+├── ${PH_NAME}
+│
+├── ${PH_MOBILE}
+│
+├── ${PH_IDENTITY}
+│
+├── ${PH_GENDER}
+│   └── 1 ──: male 
+│   └── 2 ──: female
+│
+├── ${PH_IDENTITY}
+│
+├── ${PH_ADDRESS}
+│
+├── ${PH_BIRTH_AT}
+│
+├── ${PH_IDENTITY}
+│
+├── ${INSURED_RELATION}
+│   └── 1 ──: Self
+│   └── 2 ──: Wife/Husband
+│   └── 3 ──: Son
+│   └── 4 ──: Daughter
+│   └── 5 ──: Father
+│   └── 6 ──: Mother
+│   └── 7 ──: Brother
+│   └── 8 ──: Sister
+│
+├── ${INSURED_NAME}
+│
+├── ${INSURED_IDENTITY}
+│
+├── ${BENEFICIARY_RELATION}
+│   └── 1 ──: Self
+│   └── 2 ──: Wife/Husband
+│   └── 3 ──: Son
+│   └── 4 ──: Daughter
+│   └── 5 ──: Father
+│   └── 6 ──: Mother
+│   └── 7 ──: Brother
+│   └── 8 ──: Sister
+│
+├── ${BENEFICIARY_NAME}
+│
+└── ${BENEFICIARY_IDENTITY}
 ```
-
 
