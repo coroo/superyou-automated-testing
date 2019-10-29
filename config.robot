@@ -1,7 +1,6 @@
 *** Variables ***
 ${BROWSER}                  chrome
 ${CLOSE_BROWSER}            1
-# ${SUPERLINK}                https://superyou:superyousequisonline@staging.superyou.co.id
 ${SUPERLINK}                https://superyou.co.id
 # 0: Dont Close; 1: Close; ** CLOSE BROWSER IF TESTCASE SUCCESS COMPLETELY
 ${SUPERSAFE}                1
