@@ -32,10 +32,10 @@ ${EMAIL}        coroo.wicaksono@test.com    # Mail for Sign Up
 ## Run Your Automation
 
 ```
-robot yourfile.robot
+robot yourfile (*with extension .robot)
 ```
 
 Example:
 ```
-robot supersafe.robot
+robot all_product.robot
 ```
