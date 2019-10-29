@@ -10,7 +10,7 @@
 ```
 pip install robotframework
 pip install robotframework-selenium2library
-alias chrome="open -a \"Google Chrome\"
+alias openchrome="open -a \"Google Chrome\"
 ```
 For running in chrome, find chromedriver in https://sites.google.com/a/chromium.org/chromedriver/downloads 
 <br/>and place it in this path:
@@ -37,11 +37,11 @@ robot run.robot
 <img src="assets/run-robot.png" /><br/>
 ### Open The Report
 ```
-chrome report.html
+openchrome report.html
 ```
 ### Open Detail Log
 ```
-chrome log.html
+openchrome log.html
 ```
 
 <br/><br/><hr/>
