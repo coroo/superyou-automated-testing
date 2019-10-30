@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://i.ibb.co/djnLFxG/ux-design.png" height="80" /><br/>
-  <span><b>Superyou</b>: <span>Automated Testing [BETA]</span></a>
+  <span><b>Superyou</b>: <span>Automated Testing</span> :robot:</a>
 </p>
   
 <br/>
