@@ -224,7 +224,7 @@ closeIfISay
 
 closeWithoutRunning
     CLOSE BROWSER  
-    Pass Execution If   '${SUPERSAFE}' == '0'       ========> Passed by Not Running it at all 🤫
+    Pass Execution      ========> Passed by Not Running it at all 🤫
 
 closeTheBrowser
     CLOSE BROWSER       
