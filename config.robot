@@ -1,9 +1,9 @@
 *** Variables ***
-${BROWSER}                  firefox
+${BROWSER}                  chrome
 ${CLOSE_BROWSER}            1
 
-${SUPERLINK}                https://superyou.co.id
-${SUPERSAFE}                1
+${SUPERLINK}                https://google.com
+${SUPERSAFE}                0
 ${SUPERSTRONG}              0
 ${SUPERLIFE}                0
 
