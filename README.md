@@ -23,13 +23,13 @@ For running in firefox, you need to install geckodriver:
 brew cask install geckodriver
 ```
 For running in edge, you need to install edge driver: <br/>
-https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+==> https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
 
 ### `Windows`
 For running in chrome, you need to install chromedriver: <br/>
-https://chromedriver.chromium.org/downloads <br/>
+==> https://chromedriver.chromium.org/downloads <br/>
 For running in firefox, you need to install geckodriver: <br/>
-https://github.com/mozilla/geckodriver/releases <br/>
+==> https://github.com/mozilla/geckodriver/releases <br/>
 For running in edge, you need to install edge driver in `command prompt (windows)`:
 ```
 DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
