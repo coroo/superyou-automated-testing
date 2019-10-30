@@ -10,10 +10,10 @@
 ```
 pip install robotframework
 pip install robotframework-selenium2library
-alias openchrome="open -a \"Google Chrome\" "
 ```
 
-### Driver Need to be Installed
+## Driver Need to be Installed
+### `Macbook`
 For running in chrome, you need to install chromedriver:
 ```
 brew cask install chromedriver
@@ -21,6 +21,15 @@ brew cask install chromedriver
 For running in firefox, you need to install geckodriver:
 ```
 brew cask install geckodriver
+```
+For running in edge, you need to install edge driver: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+
+### `Windows`
+For running in chrome, you need to install chromedriver: https://chromedriver.chromium.org/downloads <br/>
+For running in firefox, you need to install geckodriver: https://github.com/mozilla/geckodriver/releases <br/>
+For running in edge, you need to install edge driver in `command prompt (windows)`:
+```
+DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
 ```
 <br/>
 
@@ -38,10 +47,12 @@ robot run.robot
 <img src="assets/run-robot.png" /><br/>
 ### Open The Report
 ```
+alias openchrome="open -a \"Google Chrome\" "
 openchrome report.html
 ```
 ### Open Detail Log
 ```
+alias openchrome="open -a \"Google Chrome\" "
 openchrome log.html
 ```
 
