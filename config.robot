@@ -7,6 +7,10 @@ ${SUPERSAFE}                0
 ${SUPERSTRONG}              0
 ${SUPERLIFE}                0
 
+${IS_EXISTING}              1
+${EXISTING_USER}            gading.tak.retak@waktu.com
+${EXISTING_PASS}            01092001
+
 ${PH_EMAIL}                 coroo.wicaksono@test.com
 ${PH_NAME}                  Kuncoro Wicaksono
 ${PH_MOBILE}                087804005006
@@ -22,3 +26,9 @@ ${INSURED_IDENTITY}         4321432143214321
 ${BENEFICIARY_RELATION}     1
 ${BENEFICIARY_NAME}         Beneficiary Name
 ${BENEFICIARY_IDENTITY}     9876987698769876
+
+${CC_FULLNAME}              FASPAY
+${CC_CARDNUMBER}            4111111111111111
+${CC_CCV}                   101
+${CC_MONTH}                 05
+${CC_YEAR}                  2021
