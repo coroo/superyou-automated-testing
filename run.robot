@@ -93,7 +93,9 @@ Automated Testing:: Super Strong Protection [New User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Kapankah kamu lahir?
     waitAndClick        xpath=(//input[@type='text'])
+    Log To Console      Me Here
     runFindDate         xpath=(//input[@type='text'])   15
+    Log To Console      Me Here Too
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Apakah kamu sudah menikah?
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
@@ -360,14 +362,6 @@ runSlider
     waitAndClick        ${element}
     Run Keyword If      ${calculatedInsured}-1 >= 2   runSlider  ${element}    (${value})-1
 
-runFindDate
-    [Arguments]         ${element}        ${value}
-    sleep               1
-    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[${value}])
-    ${box text}=        Get Value    ${element}
-    ${calculatedValue} =    Evaluate    ${value}-1
-    Run Keyword If      '${box text}' == ''   runFindDate  ${element}    ${calculatedValue}
-
 insuredNotSelf
     sleep               2
     waitForTexting      yang bernama
@@ -401,6 +395,18 @@ closeWithoutRunning
 closeTheBrowser
     CLOSE BROWSER       
     Pass Execution       ✨.🚀. Cool! Automated Testing Pass With No Error!
+
+runFindDate
+    [Arguments]         ${element}        ${value}
+    sleep               1
+    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[${value}])
+    ${box text}=        Get Value    ${element}
+    Log To Console      Show Me The Result:
+    Log To Console      ${box text}
+    Log To Console      Show Me The Value:
+    Log To Console      ${value}
+    ${calculatedValue} =    Evaluate    ${value}-1
+    Run Keyword If      '${box text}' == ''   runFindDate  ${element}    ${calculatedValue}
 
 open
     [Arguments]    ${element}
