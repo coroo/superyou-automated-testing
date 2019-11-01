@@ -1,5 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
+Library         Dialogs
 Resource        config.robot
 Documentation   🤖. Automated Testing for Super You Product.
 ...             See README.MD for more documentation examples.
@@ -30,7 +31,7 @@ Automated Testing:: Super Safe Protection [New User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Kapankah kamu lahir?
     waitAndClick        xpath=(//input[@type='text'])
-    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[18])
+    runFindDate         xpath=(//input[@type='text'])   15
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Apakah kamu sudah menikah?
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
@@ -92,7 +93,7 @@ Automated Testing:: Super Strong Protection [New User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Kapankah kamu lahir?
     waitAndClick        xpath=(//input[@type='text'])
-    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[18])
+    runFindDate         xpath=(//input[@type='text'])   15
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Apakah kamu sudah menikah?
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
@@ -149,7 +150,7 @@ Automated Testing:: Super Life Protection [New User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Kapankah kamu lahir?
     waitAndClick        xpath=(//input[@type='text'])
-    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[18])
+    runFindDate         xpath=(//input[@type='text'])   15
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Apakah kamu sudah menikah?
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
@@ -359,6 +360,14 @@ runSlider
     waitAndClick        ${element}
     Run Keyword If      ${calculatedInsured}-1 >= 2   runSlider  ${element}    (${value})-1
 
+runFindDate
+    [Arguments]         ${element}        ${value}
+    sleep               1
+    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[${value}])
+    ${box text}=        Get Value    ${element}
+    ${calculatedValue} =    Evaluate    ${value}-1
+    Run Keyword If      '${box text}' == ''   runFindDate  ${element}    ${calculatedValue}
+
 insuredNotSelf
     sleep               2
     waitForTexting      yang bernama
@@ -366,7 +375,7 @@ insuredNotSelf
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      kamu lahir?
     waitAndClick        xpath=(//input[@type='text'])
-    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[18])
+    runFindDate         xpath=(//input[@type='text'])   15
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForPageContain  id=inputText
     waitAndType         id=inputText    ${INSURED_IDENTITY}
@@ -379,7 +388,7 @@ beneficiaryNotSelf
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Tanggal lahir ahli waris kamu
     waitAndClick        xpath=(//input[@type='text'])
-    waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div[2]/div/span[18])
+    runFindDate         xpath=(//input[@type='text'])   15
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     
 closeIfISay
