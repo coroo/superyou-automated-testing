@@ -275,7 +275,7 @@ Automated Testing:: Super Safe Protection [Existing User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
     sleep               5
     ${EXISTINGPAYMENT}    Run Keyword And Return Status     assertVisible    Lanjutkan pembayaran pembelian
-    Run Keyword If      '${EXISTINGPAYMENT}' == 'PASS'     click  //section[@id='sovia']/div/div[3]/div/div/div/div/div/div[2]/button
+    Run Keyword If      '${EXISTINGPAYMENT}' == 'PASS' or '${EXISTINGPAYMENT}' == 'True'     click  //section[@id='sovia']/div/div[3]/div/div/div/div/div/div[2]/button
     waitForTexting      Untuk siapa perlindungan super ini?
     Run Keyword If      ${INSURED_RELATION}-2 >= 2   runSlider    xpath=(.//*[normalize-space(text()) and normalize-space(.)='Untuk siapa perlindungan super ini? ☂️'])[1]/following::div[17]    ${INSURED_RELATION}-1
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div[${INSURED_RELATION}]/button)
@@ -329,7 +329,7 @@ Automated Testing:: Super Strong Protection [Existing User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
     sleep               5
     ${EXISTINGPAYMENT}    Run Keyword And Return Status     assertVisible    Lanjutkan pembayaran pembelian
-    Run Keyword If      '${EXISTINGPAYMENT}' == 'PASS'     click  //section[@id='sovia']/div/div[3]/div/div/div/div/div/div[2]/button
+    Run Keyword If      '${EXISTINGPAYMENT}' == 'PASS' or '${EXISTINGPAYMENT}' == 'True'     click  //section[@id='sovia']/div/div[3]/div/div/div/div/div/div[2]/button
     waitForTexting      Untuk siapa perlindungan super ini?
     Run Keyword If      ${INSURED_RELATION}-2 >= 2   runSlider    xpath=(.//*[normalize-space(text()) and normalize-space(.)='Untuk siapa perlindungan super ini? ☂️'])[1]/following::div[17]    ${INSURED_RELATION}-1
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div[${INSURED_RELATION}]/button)
@@ -383,7 +383,7 @@ Automated Testing:: Super Life Protection [Existing User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
     sleep               5
     ${EXISTINGPAYMENT}    Run Keyword And Return Status     assertVisible    Lanjutkan pembayaran pembelian
-    Run Keyword If      '${EXISTINGPAYMENT}' == 'PASS'     click  //section[@id='sovia']/div/div[3]/div/div/div/div/div/div[2]/button
+    Run Keyword If      '${EXISTINGPAYMENT}' == 'PASS' or '${EXISTINGPAYMENT}' == 'True'     click  //section[@id='sovia']/div/div[3]/div/div/div/div/div/div[2]/button
     waitForTexting      Untuk siapa perlindungan super ini?
     Run Keyword If      ${INSURED_RELATION}-2 >= 2   runSlider    xpath=(.//*[normalize-space(text()) and normalize-space(.)='Untuk siapa perlindungan super ini? ☂️'])[1]/following::div[17]    ${INSURED_RELATION}-1
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div[${INSURED_RELATION}]/button)
