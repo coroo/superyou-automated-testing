@@ -60,7 +60,7 @@ sh report.sh
 <br/><br/><hr/>
 ## More Configuration
 Here the list and detail of your `config.robot` :
-```
+```json
 .
 ├── ${BROWSER}
 │   :: Which browser do you want to run the testing ?
