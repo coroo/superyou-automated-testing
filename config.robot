@@ -7,11 +7,14 @@ ${SUPERSAFE}                0
 ${SUPERSTRONG}              0
 ${SUPERLIFE}                0
 
-${IS_EXISTING}              1
-${EXISTING_USER}            gading.tak.retak@waktu.com
+${IS_EXISTING}              0
+${EXISTING_USER}            1234123coroo.wicaksono@gmail.com
 ${EXISTING_PASS}            01092001
 
-${PH_EMAIL}                 coroo.wicaksono@test.com
+${PH_EMAIL_SUPERSAFE}       new.safe.user00002@test.com  
+${PH_EMAIL_SUPERSTRONG}     new.strong.user00002@test.com    
+${PH_EMAIL_SUPERLIFE}       new.life.user00002@test.com
+${PH_PASS}                  01092001
 ${PH_NAME}                  Kuncoro Wicaksono
 ${PH_MOBILE}                087804005006
 ${PH_IDENTITY}              1234123412341234
