@@ -90,11 +90,31 @@ Here the list and detail of your `config.robot` :
 │      └── 0 ──: not include SUPERLIFE in product test;
 │      └── 1 ──: include SUPERLIFE product test;
 │
-├── ${PH_EMAIL}
-│   :: Please provide Policy Holder Email
+├── ${IS_EXIST}
+│   :: Do you want to running Existing User ?
+│      └── 0 ──: no, run as New User;
+│      └── 1 ──: yes, I want to use Existing User;
+│
+├── ${EXISTING_USER}
+│   :: If IS_EXIST = 1, you need to define username of existing user
+│
+├── ${EXISTING_PASS}
+│   :: If IS_EXIST = 1, you need to define password of existing user
+│
+├── ${PH_EMAIL_SUPERSAFE}
+│   :: Please provide Policy Holder Email for Buy a SuperSafe Product
+│
+├── ${PH_EMAIL_SUPERSTRONG}
+│   :: Please provide Policy Holder Email for Buy a SuperStrong Product
+│
+├── ${PH_EMAIL_SUPERLIFE}
+│   :: Please provide Policy Holder Email for Buy a SuperLife Product
 │
 ├── ${PH_NAME}
 │   :: Please provide Policy Holder Name
+│
+├── ${PH_PASS}
+│   :: Please provide Policy Holder Password
 │
 ├── ${PH_MOBILE}
 │   :: Please provide Policy Holder Mobile Number
