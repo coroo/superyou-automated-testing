@@ -74,11 +74,6 @@ Automated Testing:: Super Safe Protection [New User]
     waitForTexting      Sebelum melakukan pembayaran silahkan klik tombol ini untuk verifikasi alamat email Kamu
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
     Pause Execution     Please fullfil the Verification Code & submit first. After that, click OK to continue the automation
-    # sleep               60
-    # ${CONFIRMATION_CODE} =	Get Value From User	Input user name	default
-    # type                id=vcode    ${CONFIRMATION_CODE}
-    # waitAndClick        xpath(//form[@id='verification_code']/div[3]/button)
-    # ${CONFIRMATION_CODE} =	Get Value From User	Input Password	default
     type                id=password    ${PH_PASS}
     type                id=password_confirmation    ${PH_PASS}
     waitAndClick        xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm Password'])[1]/following::button[1]
@@ -119,9 +114,7 @@ Automated Testing:: Super Strong Protection [New User]
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Kapankah kamu lahir?
     waitAndClick        xpath=(//input[@type='text'])
-    Log To Console      Me Here
     runFindDate         xpath=(//input[@type='text'])   15
-    Log To Console      Me Here Too
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Apakah kamu sudah menikah?
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
@@ -158,6 +151,27 @@ Automated Testing:: Super Strong Protection [New User]
     Run Keyword If      '${INSURED_RELATION}' != '1' and '${BENEFICIARY_RELATION}' != '1'  beneficiaryNotSelf
     waitForTexting      Sebelum melakukan pembayaran silahkan klik tombol ini untuk verifikasi alamat email Kamu
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
+    Pause Execution     Please fullfil the Verification Code & submit first. After that, click OK to continue the automation
+    type                id=password    ${PH_PASS}
+    type                id=password_confirmation    ${PH_PASS}
+    waitAndClick        xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm Password'])[1]/following::button[1]
+    sleep               1
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/form/div[1]/div/label)
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/form/div[2]/div/label)
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/form/div[3]/div/label)
+    waitAndClick        xpath=(//div[@id='monthly-yearly']/div[2]/label)
+    waitAndClick        xpath=(//a[@id='payment-list-1']/div)
+    waitAndClick        xpath=(//button[@id='next-step'])
+    sleep               2
+    waitAndType         name=CARDNAME    ${CC_FULLNAME}
+    waitAndClick        name=CARDTYPE
+    waitAndType         id=CARDNOSHOWFORMAT    ${CC_CARDNUMBER}
+    waitAndType         name=CARDCVC    ${CC_CCV}
+    select              id=month    05
+    select              id=year    2021
+    click               name=submit
+    sleep               5
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/a)
     closeIfISay
 
 Automated Testing:: Super Life Protection [New User]
@@ -217,6 +231,27 @@ Automated Testing:: Super Life Protection [New User]
     Run Keyword If      '${INSURED_RELATION}' != '1' and '${BENEFICIARY_RELATION}' != '1'  beneficiaryNotSelf
     waitForTexting      Sebelum melakukan pembayaran silahkan klik tombol ini untuk verifikasi alamat email Kamu
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
+    Pause Execution     Please fullfil the Verification Code & submit first. After that, click OK to continue the automation
+    type                id=password    ${PH_PASS}
+    type                id=password_confirmation    ${PH_PASS}
+    waitAndClick        xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm Password'])[1]/following::button[1]
+    sleep               1
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/form/div[1]/div/label)
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/form/div[2]/div/label)
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/form/div[3]/div/label)
+    waitAndClick        xpath=(//div[@id='monthly-yearly']/div[2]/label)
+    waitAndClick        xpath=(//a[@id='payment-list-1']/div)
+    waitAndClick        xpath=(//button[@id='next-step'])
+    sleep               2
+    waitAndType         name=CARDNAME    ${CC_FULLNAME}
+    waitAndClick        name=CARDTYPE
+    waitAndType         id=CARDNOSHOWFORMAT    ${CC_CARDNUMBER}
+    waitAndType         name=CARDCVC    ${CC_CCV}
+    select              id=month    05
+    select              id=year    2021
+    click               name=submit
+    sleep               5
+    waitAndClick        xpath=(//section[@id='sovia-payment']/div/div[2]/div/a)
     closeIfISay
 
 Automated Testing:: Super Safe Protection [Existing User]
