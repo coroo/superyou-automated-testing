@@ -7,31 +7,31 @@
 
 ## Installation
 
-```
+```sh
 pip install robotframework
 pip install robotframework-selenium2library
 ```
 
 ## Driver Need to be Installed
 ### `Macbook`
-For running in chrome, you need to install chromedriver:
-```
+- [x] For running in chrome, you need to install chromedriver:
+```sh
 brew cask install chromedriver
 ```
-For running in firefox, you need to install geckodriver:
-```
+- [x] For running in firefox, you need to install geckodriver:
+```sh
 brew cask install geckodriver
 ```
-For running in edge, you need to install edge driver: <br/>
-==> https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+- [x] For running in edge, you need to install edge driver: <br/>
+https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
 
 ### `Windows`
-For running in chrome, you need to install chromedriver: <br/>
-==> https://chromedriver.chromium.org/downloads <br/>
-For running in firefox, you need to install geckodriver: <br/>
-==> https://github.com/mozilla/geckodriver/releases <br/>
-For running in edge, you need to install edge driver in `command prompt (windows)`:
-```
+- [x] For running in chrome, you need to install chromedriver: <br/>
+https://chromedriver.chromium.org/downloads <br/>
+- [x] For running in firefox, you need to install geckodriver: <br/>
+https://github.com/mozilla/geckodriver/releases <br/>
+- [x] For running in edge, you need to install edge driver in `command prompt (windows)`:
+```sh
 DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
 ```
 <br/>
@@ -39,7 +39,7 @@ DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0
 ## Configuration
 
 You need to update some variable inside of `config.robot`. 
-More description, please find detail at <a href="#more-configuration">More Configuration Section</a>
+More description, please find detail at <a href="#detail-configuration-section">Detail Configuration Section</a>
 <br/>
 
 ## Run Your Automation
@@ -49,16 +49,12 @@ robot run.robot
 ```
 <img src="assets/run-robot.png" /><br/>
 ### Open The Report
-```
-sh report.sh
-```
-### Open Detail Log
-```
+```sh
 sh report.sh
 ```
 
-<br/><br/><hr/>
-## More Configuration
+<br/><br/><br/><br/><hr/>
+## Detail Configuration Section
 Here the list and detail of your `config.robot` :
 ```json
 .
