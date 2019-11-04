@@ -137,10 +137,10 @@ Here the list and detail of your `config.robot` :
 │   :: What is beneficiary relation from insured ?
 │      └── 1 ──: Self
 │      └── 2 ──: Wife/Husband
-│      └── 3 ──: Son
-│      └── 4 ──: Daughter
-│      └── 5 ──: Father
-│      └── 6 ──: Mother
+│      └── 3 ──: Father
+│      └── 4 ──: Mother
+│      └── 5 ──: Son
+│      └── 6 ──: Daughter
 │      └── 7 ──: Brother
 │      └── 8 ──: Sister
 │
