@@ -73,7 +73,7 @@ Automated Testing:: Super Safe Protection [New User]
     Run Keyword If      '${INSURED_RELATION}' != '1' and '${BENEFICIARY_RELATION}' != '1'  beneficiaryNotSelf
     waitForTexting      Sebelum melakukan pembayaran silahkan klik tombol ini untuk verifikasi alamat email Kamu
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
-    Pause Execution     Please fullfil the Verification Code & submit first. After that, click OK to continue the automation
+    Pause Execution     Please fullfil the Verification Code & click Submit First. \n After you do that, click button below to continue the automation
     type                id=password    ${PH_PASS}
     type                id=password_confirmation    ${PH_PASS}
     waitAndClick        xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm Password'])[1]/following::button[1]
@@ -151,7 +151,7 @@ Automated Testing:: Super Strong Protection [New User]
     Run Keyword If      '${INSURED_RELATION}' != '1' and '${BENEFICIARY_RELATION}' != '1'  beneficiaryNotSelf
     waitForTexting      Sebelum melakukan pembayaran silahkan klik tombol ini untuk verifikasi alamat email Kamu
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
-    Pause Execution     Please fullfil the Verification Code & submit first. After that, click OK to continue the automation
+    Pause Execution     Please fullfil the Verification Code & click Submit First. \n After you do that, click button below to continue the automation
     type                id=password    ${PH_PASS}
     type                id=password_confirmation    ${PH_PASS}
     waitAndClick        xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm Password'])[1]/following::button[1]
@@ -231,7 +231,7 @@ Automated Testing:: Super Life Protection [New User]
     Run Keyword If      '${INSURED_RELATION}' != '1' and '${BENEFICIARY_RELATION}' != '1'  beneficiaryNotSelf
     waitForTexting      Sebelum melakukan pembayaran silahkan klik tombol ini untuk verifikasi alamat email Kamu
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/div/div/div/div/button)
-    Pause Execution     Please fullfil the Verification Code & submit first. After that, click OK to continue the automation
+    Pause Execution     Please fullfil the Verification Code & click Submit First. \n After you do that, click button below to continue the automation
     type                id=password    ${PH_PASS}
     type                id=password_confirmation    ${PH_PASS}
     waitAndClick        xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm Password'])[1]/following::button[1]
