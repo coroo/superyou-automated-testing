@@ -1,4 +1,5 @@
 *** Variables ***
+## Detail documentation:    https://github.com/coroo/superyou-automated-testing#detail-configuration-section
 ${BROWSER}                  chrome
 ${CLOSE_BROWSER}            1
 
