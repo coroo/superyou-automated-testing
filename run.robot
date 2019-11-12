@@ -60,8 +60,13 @@ Automated Testing:: Super Safe Protection [New User]
     waitAndType         id=inputText    ${PH_IDENTITY}
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Tuliskan alamat lengkap tempat tinggal anda sekarang
-    waitForPageContain  id=inputText
-    waitAndType         id=inputText    ${PH_ADDRESS}
+    waitForPageContain  xpath=(//*[@id="sAddress"]/div[1]/div[2]/div/textarea)
+    waitAndType         xpath=(//*[@id="sAddress"]/div[1]/div[2]/div/textarea)    ${PH_ADDRESS}
+    waitAndType         xpath=(//*[@id="kota"])             DKI Jakarta
+    waitAndType         xpath=(//*[@id="kode_pos"])         12190
+    waitAndType         xpath=(//*[@id="kel_desa"])         Kebayoran Baru
+    waitAndType         xpath=(//*[@id="kecamatan"])        Jakarta Selatan
+    waitAndClick        xpath=(//*[@id="continue"])
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Di mana kamu lahir?
     waitForPageContain  id=inputText
@@ -138,8 +143,13 @@ Automated Testing:: Super Strong Protection [New User]
     waitAndType         id=inputText    ${PH_IDENTITY}
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Tuliskan alamat lengkap tempat tinggal anda sekarang
-    waitForPageContain  id=inputText
-    waitAndType         id=inputText    ${PH_ADDRESS}
+    waitForPageContain  xpath=(//*[@id="sAddress"]/div[1]/div[2]/div/textarea)
+    waitAndType         xpath=(//*[@id="sAddress"]/div[1]/div[2]/div/textarea)    ${PH_ADDRESS}
+    waitAndType         xpath=(//*[@id="kota"])             DKI Jakarta
+    waitAndType         xpath=(//*[@id="kode_pos"])         12190
+    waitAndType         xpath=(//*[@id="kel_desa"])         Kebayoran Baru
+    waitAndType         xpath=(//*[@id="kecamatan"])        Jakarta Selatan
+    waitAndClick        xpath=(//*[@id="continue"])
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Di mana kamu lahir?
     waitForPageContain  id=inputText
@@ -218,8 +228,13 @@ Automated Testing:: Super Life Protection [New User]
     waitAndType         id=inputText    ${PH_IDENTITY}
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Tuliskan alamat lengkap tempat tinggal anda sekarang
-    waitForPageContain  id=inputText
-    waitAndType         id=inputText    ${PH_ADDRESS}
+    waitForPageContain  xpath=(//*[@id="sAddress"]/div[1]/div[2]/div/textarea)
+    waitAndType         xpath=(//*[@id="sAddress"]/div[1]/div[2]/div/textarea)    ${PH_ADDRESS}
+    waitAndType         xpath=(//*[@id="kota"])             DKI Jakarta
+    waitAndType         xpath=(//*[@id="kode_pos"])         12190
+    waitAndType         xpath=(//*[@id="kel_desa"])         Kebayoran Baru
+    waitAndType         xpath=(//*[@id="kecamatan"])        Jakarta Selatan
+    waitAndClick        xpath=(//*[@id="continue"])
     waitAndClick        xpath=(//section[@id='sovia']/div/div[3]/div/div/button)
     waitForTexting      Di mana kamu lahir?
     waitForPageContain  id=inputText
